@@ -4,10 +4,10 @@ import "../styles/search-results.css";
 
 const SearchResults = ({ results }) => {
   if (!results.length) {
-    return <p>Try again!</p>;
+    return <p>No results</p>;
   } else {
     return (
-      <div className="search-results__images">
+      <div className="search-results__image">
         {results.map((image) => (
           <img className="card-image" src={image} alt="space" />
         ))}
@@ -18,5 +18,5 @@ const SearchResults = ({ results }) => {
 export default SearchResults;
 
 SearchResults.propTypes = {
-  results: PropTypes.array.isRequired,
+  results: PropTypes.arrayOf(PropTypes.string),
 };
