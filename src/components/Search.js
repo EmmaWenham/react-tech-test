@@ -4,11 +4,11 @@ import "../styles/search.css";
 import getImages from "../requests/getImages";
 
 const Search = ({ setSearchResults }) => {
-  const [value, setValue] = useState();
+  const [searchTerm, setSearchTerm] = useState();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setSearchResults(await getImages(value));
+    setSearchResults(await getImages(searchTerm));
   };
   return (
     <div className="search">
@@ -16,7 +16,7 @@ const Search = ({ setSearchResults }) => {
         <input
           className="search-input"
           type="text"
-          onChange={(e) => setValue(e.target.value)}
+          onChange={(e) => setSearchTerm(e.target.value)}
         />
         <button className="search-btn" type="submit">
           Go!
@@ -25,8 +25,8 @@ const Search = ({ setSearchResults }) => {
     </div>
   );
 };
-export default Search;
 
 Search.propTypes = {
   setSearchResults: PropTypes.func,
 };
+export default Search;

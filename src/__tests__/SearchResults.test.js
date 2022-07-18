@@ -9,7 +9,7 @@ describe("Search Results", () => {
 
   it("renders SearchResult component correctly", () => {
     const { asFragment } = render(
-      <SearchResults results={validProps.results} />);
+      <SearchResults results={validProps.searchResults} />);
 
     expect(asFragment()).toMatchSnapshot();
   });

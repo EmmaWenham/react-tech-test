@@ -9,14 +9,15 @@ const SearchResults = ({ results }) => {
     return (
       <div className="search-results__image">
         {results.map((image) => (
-          <img className="card-image" src={image} alt="space" />
+          <img className="card-image" src={image} alt="spaceImage" />
         ))}
       </div>
     );
   }
 };
-export default SearchResults;
 
 SearchResults.propTypes = {
   results: PropTypes.arrayOf(PropTypes.string),
 };
+
+export default SearchResults;

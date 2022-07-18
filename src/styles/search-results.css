@@ -5,7 +5,7 @@ p {
 .search-results {
   margin-top: 30px;
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
@@ -18,14 +18,11 @@ p {
   grid-gap: 10px;
   justify-items: center;
   align-items: center;
-  height: auto;
   width: 1400px;
 }
 
 .card-image {
   max-height: 350px;
   max-width: 450px;
-  height: auto;
-  width: auto;
   align-items: center;
 }
